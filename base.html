@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+
+        <title> Cookbook </title>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+      
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+        <link type="text/css" rel="stylesheet" href="style.css" />
+        
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular-route.min.js"></script> 
+        
+        <script src="app.js"></script>
+        
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular-route.js"></script>
+        
+    </head>
+    
+    <body ng-app="cupcakeLand">
+        <div>
+            <section class="white">
+                <section class="stripes"></section>
+
+                <section class="top-border"></section>
+
+                <h1 class="mainhead">
+                    <a href="base.html">Cupcake-Land</a>
+                </h1>
+
+                <section class="bottom-border">
+                    <div class="hat"></div>
+                </section>
+
+                <section class="light" ng-controller="NavCtrl">
+                    <a ng-class="{active: isActive('/catalog')}" class="tag" href="#/catalog">
+                        Каталог
+                    </a>
+
+                    <a ng-class="{active: isActive('/about')}" class="tag" href="#/about">О нас</a>
+                    <a ng-class="{active: isActive('/contacts')}" class="tag" href="#/contacts">Контакты</a>
+                    <a ng-class="{active: isActive('/basket')}" class="tag" href="#/basket">Корзина</a>
+                    
+                    <a ng-class="{active: isActive('/delivery')}" class="tag" href="#/delivery">Доставка</a>
+                    
+                </section>
+
+                <section ng-view class="bright">
+                </section>
+            </section>
+        </div>
+        <section class="white recipe-form"> 
+        </section>
+
+        <footer>2015 Powered by Django</footer>
+    </body>
+</html>
